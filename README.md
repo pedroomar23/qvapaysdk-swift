@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Swift-6.2-orange.svg" alt="Swift 6.2" />
-    <a href="https://github.com/pedroomar23/qvapyasdk-swift"><img src="https://img.shields.io/badge/documentation-web-blue.svg" alt="Documentation" /></a>
+    <a href="https://qvapay.com"><img src="https://img.shields.io/badge/documentation-web-blue.svg" alt="Documentation" /></a>
     <a href="https://github.com/pedroomar23/qvapaysdk-swift/blob/master/LICENSE"><img src="https://img.shields.io/github/license/danielsaidi/SwiftUIKit" alt="MIT License" /></a>
 </p>
 
