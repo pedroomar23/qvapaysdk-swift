@@ -1,5 +1,5 @@
 <p align="center"> 
-    <img src="https://github.com/pedroomar23/qvapaysdk-swift/blob/main/Resours/Icon-iOS-Default-1024x1024%401x.png" alt="https://qvapay.com" width="250">
+    <img src="https://github.com/pedroomar23/qvapaysdk-swift/blob/main/Resources/Icon-iOS-Default-1024x1024%401x.png" alt="https://qvapay.com" width="250">
 </p>
 <p align="center">
      <img src="https://img.shields.io/badge/release 1.0.0-blue.svg" alt="release 1.0.0" />
