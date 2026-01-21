@@ -108,7 +108,7 @@ public struct ME : Decodable, Hashable, Encodable, Sendable {
         self.phone = try container.decode(String.self, forKey: .phone)
         self.phone_verified = try container.decode(Bool.self, forKey: .phone_verified)
         self.telegram = try container.decode(String.self, forKey: .telegram)
-        self.twitter = try container.decodeIfPresent(String.self, forKey: .twitter)
+        self.twitter = try container.decodeIfPresent(String.self, forKey: .twitter) ?? ""
         self.kyc = try container.decode(Bool.self, forKey: .kyc)
         self.vip = try container.decode(Bool.self, forKey: .vip)
         self.golden_check = try container.decode(Bool.self, forKey: .golden_check)

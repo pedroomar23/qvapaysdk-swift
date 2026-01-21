@@ -41,8 +41,10 @@ public class LoginApi : @unchecked Sendable {
             remember: remember
         )
         
+        print("✅ DEBUG: JSON REQUEST \(loginModel)")
+        
         do {
-            let jsonBody = try? JSONEncoder().encode(loginModel)
+            let jsonBody = try JSONEncoder().encode(loginModel)
             request.httpBody = jsonBody
             
             let (data, response) = try await session.data(for: request)
@@ -75,7 +77,7 @@ public class LoginApi : @unchecked Sendable {
     
     // MARK: - Login Request Pin
     
-    public func requestPin(username: String, password: String, completion: @escaping (Result<LoginResponse, NetworkError>) -> Void) async {
+    public func requestPin(email: String, password: String, completion: @escaping (Result<LoginResponse, NetworkError>) -> Void) async {
         let decoder = JSONDecoder()
         let requestURL = EndpointUrl.requestPin.url
         var request = URLRequest(url: requestURL)
@@ -87,12 +89,14 @@ public class LoginApi : @unchecked Sendable {
         logger.info("✅ DEBUG: Iniciando Solicitud a POST \(requestURL.absoluteString)")
         
         let requestPin = RequestPin(
-            username: username,
+            email: email,
             password: password
         )
         
+        print("✅ DEBUG: JSON REQUEST \(requestPin)")
+        
         do {
-            let jsonBody = try? JSONEncoder().encode(requestPin)
+            let jsonBody = try JSONEncoder().encode(requestPin)
             request.httpBody = jsonBody
             
             let (data, response) = try await session.data(for: request)

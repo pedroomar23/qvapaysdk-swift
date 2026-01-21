@@ -38,11 +38,13 @@ public class RegisterApi : @unchecked Sendable {
             email: email,
             password: password,
             c_password: c_password,
-            invite: invite
+            invite: invite,
         )
         
+        print("✅ DEBUG: JSON REQUEST \(register)")
+        
         do {
-            let jsonBody = try? JSONEncoder().encode(register)
+            let jsonBody = try JSONEncoder().encode(register)
             request.httpBody = jsonBody
             
             let (data, response) = try await session.data(for: request)
